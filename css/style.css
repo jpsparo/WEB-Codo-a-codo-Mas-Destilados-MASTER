@@ -1,0 +1,292 @@
+/* Fuente para usar */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+/* Normalización */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif; /* Esta es una opción de fuente */
+}
+
+:root{
+    /*
+        declaracion de variables para colores principales del theme.
+        se declaran utilizando --var = valor_a_asignar; valor a asignar puede ser un valor de cualquier propiedad de css
+        por ejemplo: 15px; red; inherit, etc. No puede contener propiedades de css como color, o margin. 
+    */
+    /* variable de color principal */
+    --color-principal: #f4f304;
+    /* variables para colores neutros */
+    --color-contraste-dark: #4a4440;
+    --color-contraste-dark-alt: #2b2b2b;
+    --color-contraste-light: #F1F2ED;
+    /* variables para colores secundarios */
+    --color-secondary-red: #AB2133;
+}
+
+ul {
+   list-style-type: none; 
+}
+a {
+    text-decoration: none;
+}
+/* Estilo */
+.cabecera {
+    background-color: var(--color-contraste-dark);
+    background: linear-gradient(to top, var(--color-contraste-dark-alt), var(--color-contraste-dark));
+}
+
+html {
+    font-family: 'Roboto', sans-serif;
+    font-size: 62.5%;
+}
+
+body {
+    color: var(--color-principal);
+    background-color: var(--color-contraste-dark-alt);
+}
+
+img {
+    width: 100%;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* HEADER */
+
+header {
+    padding: 2rem;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.navbar .navbar__logo {
+    max-width: 250px;
+    min-width: 190px;
+}
+
+.navbar .navbar__menu {
+    display: flex;
+    gap: 4rem;
+}
+
+.navbar .navbar__menu .menu__item__link {
+    font-size: 1.8em;
+    padding: 1rem;
+    border-radius: 0.6em;
+    border: 0.01rem solid var(--color-contraste-light);
+    display: block;
+}
+
+.navbar__menu .navbar__menu__item:hover .menu__item__link {
+    background-color: var(--color-contraste-dark-alt);
+    border: 0.01rem solid var(--color-principal);
+    color: var(--color-contraste-light);
+}
+
+/*Formulario*/
+
+form{ 
+    width: 100%;
+    padding: 1rem;
+    display:flex;
+    justify-content: flex-start;
+}
+
+fieldset{
+    width: 100%;
+    border-radius: 15px;
+    padding: 2rem;
+}
+
+legend{
+    color: inherit;
+}
+
+img{
+    border-radius: 15px;
+}
+
+label{
+    padding-right: 1rem;
+}
+
+.check{
+    display: flex;
+    justify-content: flex-end;
+    padding: 1rem;
+}
+
+.row{
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    padding: 1rem;
+}
+
+.date{
+    color:dimgray;
+}
+
+.btn-dark{
+    color: dimgray;
+}
+
+#myCarousel{ 
+    width: max-content;   
+    display: flex;
+    justify-content: center;
+}
+
+/* Footer */
+
+footer{
+    display: flex;
+    padding: 1em 0;
+    grid-template-areas: "footer footer";
+    justify-content: center;
+    
+    width: 100%;
+}
+
+.fa{
+    display: flex;
+    padding: 0 1em;
+    justify-content: space-between;
+    align-content: space-between;
+}
+
+
+/************************-[ESTILOS PARA CARDS EN PRODUCTOS.HTML]-************************/
+
+.products-title{
+    margin: 1.5rem auto;
+    text-align: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--color-principal);
+    max-width: 90%;
+    font-size: 2.3em;
+    font-weight: 300;
+    letter-spacing: 0.45rem;
+    text-transform: uppercase;
+    color: var(--color-principal);
+}
+
+.product-container{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 15px auto;
+    gap: 10px 10px;
+}
+
+.product-container__item{
+    flex: 0 0 24%;
+    min-height: 325px;
+    border-radius: 15px;
+}
+
+.card{
+    position: relative;
+    border: 1px solid var(--color-principal);
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    padding-bottom: 5px;
+}
+
+.card:hover{
+    cursor: pointer;
+}
+.card:hover .card__image{
+    transform: scale(1.25);
+    transition: 1s;
+}
+.card:hover .card__text--principal{
+    box-shadow: 0 -1px 5px 0 white;
+}
+
+
+.card__image{
+    position: relative;
+    top: 0;
+    width: 120%;
+    object-fit: cover;
+    transition: 1s;
+}
+
+.card__texts{
+    position: absolute;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    height: 100%;
+    top: 0px;
+    background-color: rgba(0,0,0,0.25);
+}
+
+.card__text--principal{
+    background-color: rgba(0,0,0,0.75);
+    padding: 5px 15px;
+    font-size: 1.05rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    min-height: 30%;
+    max-height: 30%;
+}
+
+.card__title{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #DEDD0E;
+    color: rgba(222, 221, 14, 0.9);
+    text-transform: uppercase;
+    font-size: 1.25rem;
+    letter-spacing: 0.7rem;
+    text-align: center;
+}
+
+.card__category{
+    margin-top: 10px;
+    width: fit-content;
+    min-width: 30%;
+    margin: 10px 0;
+    padding: 5px 15px;
+    border-radius: 0 5px 5px 0;
+    font-size: 1.75rem;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+}
+
+.card__category--ale{
+   background-color: var(--color-secondary-red);
+   color: var(--color-contraste-light);
+}
+.card__category--lager{
+   background-color: #DEDD0E;
+   color: var(--color-contraste-dark-alt);
+}
+
+.card__description{
+    margin: 10px auto;
+    color: rgba(222, 221, 243, 0.9);
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1.15rem;
+    letter-spacing: 0.1rem;
+}
+
+/****************************************************************************************/
+
