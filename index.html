@@ -1,56 +1,46 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="/assets/icons/favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/media-style.css">
-    <title>Mas Destilados</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="assets/favicon.png" type="image/x-icon">
+    <title>Inicio</title>
 </head>
-<body>
-    <header class="cabecera"> 
-        <nav class="navbar"> 
-            <picture class="navbar__logo"> 
+<body class="hero-image">
+    <div class="wrap">
+        <nav class="menu">
+            <button class="menu__hamburger"><i class="fa fa-bars"></i><i class="fa fa-times"></i></button>
+            <figure class="menu__brand">
                 <a href="index.html">
-                    <img src="/assets/img/Logo Mas Destilados.png" alt="Logo">
+                    <img src="assets/img/menu-brand.png" class="menu__image" alt="logo de menu">
                 </a>
-            </picture>
-            <ul class="navbar__menu">
-                <li class="navbar__menu__item">
-                    <a class="menu__item__link" href="index.html">Inicio</a>
-                </li>
-                <li class="navbar__menu__item">
-                    <a class="menu__item__link" href="/html/nosotros.html">Nosotros</a>
-                </li>
-                <li class="navbar__menu__item">
-                    <a class="menu__item__link" href="/html/productos.html">Productos</a>
-                    <!-- 
-                    <ul class="navbar__menu">
-                        <li class="navbar__menu__item">
-                            <a class="menu__item__link" href="">Cervezas</a>
-                        </li>
-                        <li class="navbar__menu__item">
-                            <a class="menu__item__link" href="">Vinos</a>
-                        </li>
-                        <li class="navbar__menu__item">
-                            <a class="menu__item__link" href="">Whiskys</a>
-                        </li>
-                    </ul>
-                    -->
-                </li>
-                <li class="navbar__menu__item">
-                    <a class="menu__item__link" href="/html/contacto.html">Contacto</a>
-                </li>
+            </figure>
+            <ul class="menu__list">
+                <li class="menu__item"><a href="html/catalogo.html" class="menu__link">Catalogo</a></li>
+                <li class="menu__item"><a href="html/nosotros.html" class="menu__link">Empresa</a></li>
+                <li class="menu__item"><a href="html/contacto.html" class="menu__link">Contacto</a></li>
             </ul>
-
         </nav>
+        <main class="index-container">
+            <div class="brand">
+                <img src="assets/img/banner-brand-no-margins.png" alt="Banner marca" class="brand__image">
+                <h1 class="brand__slogan">Lideres en distribución de bebidas</h1>
+            </div>
+            <div class="index-container__social-icons">
+                <ul class="social-icons__list">
+                    <li class="social-icons__item"><a href="#" class="social-icons__link"><i class="fa fa-facebook-official"></i> Facebook</a></li>
+                    <li class="social-icons__item"><a href="#" class="social-icons__link"><i class="fa fa-instagram"></i> Instagram</a></li>
+                    <li class="social-icons__item"><a href="#" class="social-icons__link"><i class="fa fa-youtube-play"></i> Youtube</a></li>
+                </ul>
+            </div>
+        </main>
+    </div>
 
-    </header>
-    <picture>
-        <img class="inicio_img" src="assets/img/cartel mas destilados distribucion.png" Mas Destilados Logo">
-    </picture>
-     
+    <script src="/js/app.js"></script>
 </body>
 </html>

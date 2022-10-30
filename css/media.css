@@ -1,0 +1,129 @@
+/* Dispositivos medianos (tablets, smartphones landscape) */
+@media (max-width: 768px) {
+    .menu{
+        flex-direction: column;
+        justify-content: center;
+    }
+    .menu__list{
+        flex-grow: 1;
+        display: flex;
+        justify-content: center;
+    }
+
+    .brand__image{
+        width: 85vw;
+    }
+    .brand__slogan{
+        font-size: 3.75vw;
+    }
+
+    /* catalog */
+    .catalog__product{
+        flex: 0 0 40%;
+    }
+
+    /* contact */
+    .contact>section{
+        flex: 0 0 75%;
+    }
+
+    /*about*/
+    .about__info>article{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .post__image{
+        max-width: 100%;
+    }
+
+    .review{
+        flex: 0 0 45%;
+    }
+
+    /* footer */
+    .footer{
+        flex-flow: column wrap;
+    }
+    .footer__item{
+        flex: 0 0 90%;
+        border-right: none;
+    }
+}
+
+/*   Break points tomados de bootstrap (como referencia)   */
+/* Dispositivos pequeños (smartphones portrait) */
+@media (max-width: 480px) {
+    .menu{
+        flex-direction: row;
+    }
+    .menu__hamburger{
+        display:block;
+        color: aliceblue;
+        font-size: xx-large;
+        font-weight: 800;
+        z-index: 998;
+    }
+
+    i.fa-times{
+        display: none;
+    }
+
+    .menu__brand{
+        flex-grow: 1;
+        display: flex;
+        justify-content: center;
+    }
+    .menu__brand>img{
+        display: block;
+        width: 90px;
+        z-index: 98;
+   }
+   .menu__list{
+        display: none;
+        transition: all 3.5s ease-out;
+   }
+   .menu__list--active{
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: flex-start;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        padding-top: 90px;
+        padding-left: 15px;
+        background-color: rgba(0,0,0,0.95);
+        transition: all 0.75s ease;
+        text-align: center;
+        z-index: 1;
+   }
+   .menu__list--active .menu__item{
+        width: 100%;
+    }
+    .menu__list--active .menu__link {
+        background-color: transparent;
+        padding-left: 15px;
+        border: none;
+   }
+   .menu__list--active .menu__link:hover {
+        color: var(--color-principal);
+    }
+    .menu__list--active .menu__link--active{
+        border-left: 5px solid var(--color-principal);
+    }
+    .social-icons__list{
+        font-size: 0.83em;
+   }
+
+   /* catalog */
+   .catalog__product{
+    flex: 0 0 80%;
+   }
+
+   .review{
+    flex: 0 0 75%;
+}
+}

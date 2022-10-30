@@ -1,147 +1,105 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto</title>
-    <link rel="shortcut icon" href="../assets/favicon/favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/media-style.css">
+    <link rel="stylesheet" href="../css/media.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="../assets/favicon.png" type="image/x-icon">
+    <title>Contacto</title>
 </head>
-<body>
-    <header class="cabecera"> 
-        <nav class="navbar"> 
-            <picture class="navbar__logo"> 
+<body class="hero-image hero-image--fixed">
+    <div class="wrap">
+        <nav class="menu menu--fixed">
+            <button class="menu__hamburger"><i class="fa fa-bars"></i><i class="fa fa-times"></i></button>
+            <figure class="menu__brand">
                 <a href="../index.html">
-                    <img src="../assets/img/Logo Mas Destilados.png" alt="Logo">
+                    <img src="../assets/img/menu-brand.png" class="menu__image" alt="logo de menu">
                 </a>
-            </picture>
-            <ul class="navbar__menu">
-                <li class="navbar__menu__item">
-                    <a class="menu__item__link" href="../index.html">Inicio</a>
-                </li>
-                <li class="navbar__menu__item">
-                    <a class="menu__item__link" href="Nosotros.html">Nosotros</a>
-                </li>
-                <li class="navbar__menu__item">
-                    <a class="menu__item__link" href="Productos.html">Productos</a>
-                    <!-- 
-                    <ul class="navbar__menu">
-                        <li class="navbar__menu__item">
-                            <a class="menu__item__link" href="">Cervezas</a>
-                        </li>
-                        <li class="navbar__menu__item">
-                            <a class="menu__item__link" href="">Vinos</a>
-                        </li>
-                        <li class="navbar__menu__item">
-                            <a class="menu__item__link" href="">Whiskys</a>
-                        </li>
-                    </ul>
-                    -->
-                </li>
-                <li class="navbar__menu__item">
-                    <a class="menu__item__link" href="Contacto.html">Contacto</a>
-                </li>
+            </figure>
+            <ul class="menu__list">
+                <li class="menu__item"><a href="catalogo.html" class="menu__link">Catalogo</a></li>
+                <li class="menu__item"><a href="nosotros.html" class="menu__link">Empresa</a></li>
+                <li class="menu__item"><a href="contacto.html" class="menu__link menu__link--active">Contacto</a></li>
             </ul>
-
         </nav>
-
-    </header>
-    <main>
-        <div class="row">
-            <div class="col-md-8 col-sm-6">
-                <div class="row">              
-                    <form>
-                        <fieldset style="border: 2px solid">
-                            <legend>Formulario de contacto</legend>
-                            <label for="firstname">Nombre:</label><input name="firstname" type="text" placeholder="Introduce tu nombre" maxlength="15" size="20">
-                            <br><br>
-                            <label for="lastname">Apellido:</label><input name="lastname" type="text" placeholder="Introduce tu apellido" maxlength="15" size="20">
-                            <br><br>
-                            <label for="adress">Dirección email:</label><input name="adress" type="email" placeholder="Introduce tu dirección" maxlength="30" size="20">
-                            <br><br>
-                            <label for="phone">Teléfono:</label><input name="phone" type="number" placeholder="Introduce tu n° de teléfono (sin guiones)" maxlength="10" size="20">
-                            <br><br>
-                            <label for="city">Localidad:</label><input name="city" type="text" placeholder="Introduce tu localidad" maxlength="25" size="20">
-                            <br><br>
-                            <label for="adress">Direccion:</label><input name="adress" type="text" placeholder="Introduce tu dirección" maxlength="20" size="20">
-                            <br><br>
-                            <label for="CUIT">CUIT:</label><input name="CUIT" type="number" placeholder="Introduce tu n° de CUIT o CUIL" maxlength="11" size="20">
-                            <br><br>
-                            <label for="date">Fecha de nacimiento:</label><input type="date" class="date">
-                            <br><br>
-                            <div>
-                                <b>Desea usted recibir avisos con distintos descuentos:</b><br>                                
-                                <label for="si">Si</label><input type="radio" name="" id="si">
-                                <label for="no">No</label><input type="radio" name="" id="no">
-                            </div><br>                   
-                            <div class="check">
-                                <input class="btn-success" type="submit" value="Enviar datos">
-                                <input class="btn-dark" type="reset" name="Borrar">
-                            </div>
-                        </fieldset>
-                    </form>
+        <main class="no-index contact">
+            <section class="contact__form">
+                <h2>Formulario de contacto</h2>
+                <form id="contact-form">
+                    <label for="name">Nombre:</label>
+                        <input type="text" name="name" id="name" placeholder="Nombre">
+                        <span class="error"></span>
+                    <label for="surname">Apellido:</label>
+                        <input type="text" name="surname" id="surname" placeholder="Apellido">
+                        <span class="error"></span>
+                    <label for="trade">Razon Social</label>
+                        <input type="text" name="trade" id="trade" placeholder="Razon Social">
+                        <span class="error"></span>
+                    <label for="cuit">CUIT:</label>
+                        <input type="number" name="cuit" id="cuit" placeholder="CUIT">
+                        <span class="error"></span>
+                    <label for="phone">Telefono:</label>
+                        <input type="tel" name="phone" id="phone" placeholder="Telefono">
+                        <span class="error"></span>
+                    <label for="email">Email:</label>
+                        <input type="email" name="email" id="email" placeholder="E-Mail">
+                        <span class="error"></span>    
+                    <label for="comment">Comentarios:</label>
+                        <textarea name="comment" class="contact__comment" id="comment" placeholder="Ingrese aqui su consulta"></textarea>
+                        <span class="error"></span>
+                    <input id="send" type="submit" value="Enviar" class="contact__submit">
+                </form>
+            </section>
+            <section class="contact__map">
+                <h2>Casa Matriz</h2>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.4028300540053!2d-58.36402368560857!3d-34.619259180455444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a334d05fb035ed%3A0x46598bde12d2877e!2sJuana%20Manso%201751%2C%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1666804981098!5m2!1ses!2sar" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="footer__item footer_sitemap">
+                <h3 class="sitemap__title">Mapa del sitio</h3>
+                <ul class="sitemap__list">
+                    <li class="sitemap__item"><a href="../index.html" class="sitemap__link">Inicio</a></li>
+                    <li class="sitemap__item"><a href="catalogo.html" class="sitemap__link">Catalogo de productos</a></li>
+                    <li class="sitemap__item"><a href="nosotros.html" class="sitemap__link">Acerca de la Empresa</a></li>
+                    <li class="sitemap__item"><a href="contacto.html" class="sitemap__link">Formulario de contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer__item footer__info">
+                <h3>Mas Destilados®</h3>
+                <p class="info__text"> <i class="fa fa-map-marker"></i> Juana Manso 1751, CABA </p>
+                <p class="info__text"> <i class="fa fa-phone"></i> 011 - 2252 3254 / 011 - 2253 3255</p>
+                <p class="info__text"> <i class="fa fa-whatsapp"></i> 011 - 2252 3256 </p>
+            </div>
+            <div class="footer__item footer__social">
+                <h3 class="social__title">Visitanos en redes sociales</h3>
+                <ul class="social__list">
+                    <li class="social__item"><a href="#" class="social__link"><i class="fa fa-facebook-square"></i> Facebook</a></li>
+                    <li class="social__item"><a href="#" class="social__link"><i class="fa fa-instagram"></i> Instagram </a></li>
+                    <li class="social__item"><a href="#" class="social__link"><i class="fa fa-youtube"></i> Youtube</a></li>
+                </ul>
+            </div>
+        </footer>
+        <div id="myalert__container">
+            <div id="myalert">
+                <div class="myalert__upbar">
+                    <h3 class="myalert__title"></h3>
                 </div>
-            </div>        
-            <div class="col-md-4 col-sm-3">
-                <div id="myCarousel" class="carousel slide" data-ride="carousel">
-        
-                    <!-- un indicator por cada imagenes -->
-                    <ol class="carousel-indicators">
-                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                        <li data-target="#myCarousel" data-slide-to="1"></li>
-                        <li data-target="#myCarousel" data-slide-to="2"></li>
-                    </ol>
-        
-                    <!-- Wrapper for slides -->
-                    <div class="carousel-inner">
-        
-                        <div class="item active">
-                            <img src="/assets/img/Johnny Walker Blue Label.png" alt="Blue Label">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h3>$ 60.000</h3>                
-                            </div>
-                        </div>
-        
-                        <div class="item">
-                            <img src="/assets/img/jackdaniels.png" alt="jackdaniels">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h3>$ 35.000</h3>
-                            </div>
-                        </div>
-        
-                        <div class="item">
-                            <img src="/assets/img/absolut.png" alt="Absolut">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h3>$ 4.000</h3>
-                            </div>
-                        </div>
-                    </div>
-        
-                    <!-- Left and right controls -->
-                    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-                        <span class="glyphicon glyphicon-chevron-left"></span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="right carousel-control" href="#myCarousel" data-slide="next">
-                        <span class="glyphicon glyphicon-chevron-right"></span>
-                        <span class="sr-only">Next</span>
-                    </a>
+                <div class="myalert__info">
+                    <div class="myalert__icon-container"></div>
+                    <div class="myalert__text"></div>
+                </div>
+                <div class="myalert__bottom">
+                    <button class="myalert__acept" onclick="myalertClose()">Aceptar</button>
                 </div>
             </div>
         </div>
-    </main>
-    <footer>
-        <p>Más Destilados® Todos los derechos reservados. Made with love by Milagros Foglia, Jonás Muñiz y Juan Pablo Sparo.</p>
-        <a href="#" class="fa fa-facebook"></a>
-        <a href="#" class="fa fa-instagram"></a>  
-    </footer>
-    
+    </div>
+    <script src="../js/app.js"></script>
+    <script src="../js/validate.js"></script>
 </body>
 </html>
